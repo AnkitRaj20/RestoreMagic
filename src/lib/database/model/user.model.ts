@@ -9,8 +9,6 @@ export interface userInterface extends Document {
   lastName?: string;
   planId?: Number;
   creditBalance?: Number;
-  createdAt: Date;
-  updatedAt: Date;
 }
 
 const userSchema = new Schema({
@@ -50,15 +48,7 @@ const userSchema = new Schema({
     default: 10,
   },
 
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+}, {timestamps: true});
 const User = models?.User || model("User", userSchema);
 
 export default User;
