@@ -1,3 +1,4 @@
+import Footer from '@/components/shared/Footer'
 import MobileNav from '@/components/shared/MobileNav'
 import Sidebar from '@/components/shared/Sidebar'
 import { Toaster } from '@/components/ui/toaster'
@@ -14,6 +15,7 @@ const layout = ({children}:{children:React.ReactNode}) => {
         <div className="wrapper">
             {children}
         </div>
+       <Footer />
        </div>
        <Toaster />
     </main>
