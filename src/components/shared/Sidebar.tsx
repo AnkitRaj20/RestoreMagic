@@ -15,13 +15,19 @@ const Sidebar = () => {
       <div className="flex size-full flex-col gap-2">
         <Link href="/" className="sidebar-logo">
           {/* <img src="https://images.unsplash.com/photo-1707726244537-8d43a67e7ec7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="logo" /> */}
-          RestoreMagic
+          <Image
+            src="/assets/images/RestoreMagicSide.png"
+            alt="menu"
+            width={1520}
+            height={1320}
+            className="cursor-pointer"
+          />
         </Link>
- 
+
         <nav className="sidebar-nav">
           <SignedIn>
             <ul className="sidebar-nav_elements">
-              {navLinks.slice(0,6).map((link) => {
+              {navLinks.slice(0, 6).map((link) => {
                 const isActive = link.route === pathname;
 
                 return (
@@ -46,9 +52,9 @@ const Sidebar = () => {
                   </li>
                 );
               })}
-              </ul>
+            </ul>
 
-              <ul className="sidebar-nav_elements">
+            <ul className="sidebar-nav_elements">
               {navLinks.slice(6).map((link) => {
                 const isActive = link.route === pathname;
 
